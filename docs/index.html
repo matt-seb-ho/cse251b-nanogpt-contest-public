@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSE 251B — NanoGPT Competition Leaderboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    .mono { font-family: 'JetBrains Mono', monospace; }
+    .rank-gold   { background: linear-gradient(135deg, #fef9c3, #fef3c7); }
+    .rank-silver { background: linear-gradient(135deg, #f1f5f9, #e2e8f0); }
+    .rank-bronze { background: linear-gradient(135deg, #fff7ed, #fed7aa); }
+  </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+
+  <!-- Header -->
+  <header class="bg-white border-b border-gray-200 shadow-sm">
+    <div class="max-w-5xl mx-auto px-6 py-6">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <p class="text-sm font-medium text-indigo-600 uppercase tracking-widest mb-1">CSE 251B · Spring 2026</p>
+          <h1 class="text-3xl font-bold text-gray-900">NanoGPT Competition</h1>
+          <p class="mt-1 text-gray-500 text-sm">Leaderboard — official TA evaluation on the public validation split</p>
+        </div>
+        <div class="text-right shrink-0">
+          <div id="update-badge" class="inline-flex items-center gap-1.5 bg-gray-100 text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full">
+            <span class="w-1.5 h-1.5 rounded-full bg-gray-400 inline-block"></span>
+            <span id="updated-at">Loading…</span>
+          </div>
+          <p class="text-xs text-gray-400 mt-1.5">Updated weekly by TAs · Self-report via course portal</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Stats bar -->
+  <div class="bg-white border-b border-gray-100">
+    <div class="max-w-5xl mx-auto px-6 py-3 flex gap-8 text-sm text-gray-500">
+      <span>Teams on board: <strong id="stat-teams" class="text-gray-900">—</strong></span>
+      <span>Best PPL: <strong id="stat-best" class="text-gray-900 mono">—</strong></span>
+      <span>Eval split: <strong id="stat-split" class="text-gray-900">—</strong></span>
+      <span>Time limit: <strong id="stat-limit" class="text-gray-900">—</strong></span>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <main class="max-w-5xl mx-auto px-6 py-8">
+
+    <!-- Loading state -->
+    <div id="loading" class="text-center py-20 text-gray-400">
+      <svg class="animate-spin h-8 w-8 mx-auto mb-3 text-indigo-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
+      </svg>
+      <p>Loading leaderboard…</p>
+    </div>
+
+    <!-- Empty state -->
+    <div id="empty" class="hidden text-center py-20">
+      <p class="text-4xl mb-3">🏁</p>
+      <p class="text-gray-600 font-medium">No results yet</p>
+      <p class="text-gray-400 text-sm mt-1">Check back after the first TA evaluation run.</p>
+    </div>
+
+    <!-- Leaderboard table -->
+    <div id="table-wrap" class="hidden">
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-gray-50 border-b border-gray-200 text-gray-500 text-xs uppercase tracking-wider">
+              <th class="px-5 py-3 text-center w-12">#</th>
+              <th class="px-5 py-3 text-left">Group</th>
+              <th class="px-5 py-3 text-right">Perplexity ↑ lower is better</th>
+              <th class="px-5 py-3 text-right">Parameters</th>
+              <th class="px-5 py-3 text-right">Eval time</th>
+            </tr>
+          </thead>
+          <tbody id="leaderboard-body" class="divide-y divide-gray-100">
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Errors section (collapsed by default) -->
+      <div id="errors-section" class="hidden mt-6">
+        <details class="bg-white rounded-xl shadow-sm border border-red-100 overflow-hidden">
+          <summary class="px-5 py-3 text-sm font-medium text-red-600 cursor-pointer hover:bg-red-50 select-none">
+            Failed submissions (<span id="error-count">0</span>)
+          </summary>
+          <table class="w-full text-sm border-t border-red-100">
+            <thead>
+              <tr class="bg-red-50 text-red-400 text-xs uppercase tracking-wider">
+                <th class="px-5 py-2 text-left">Group</th>
+                <th class="px-5 py-2 text-left">Status</th>
+                <th class="px-5 py-2 text-left">Error</th>
+              </tr>
+            </thead>
+            <tbody id="errors-body" class="divide-y divide-red-50"></tbody>
+          </table>
+        </details>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="max-w-5xl mx-auto px-6 py-8 text-xs text-gray-400 border-t border-gray-100 mt-4">
+    <p>
+      Perplexity measured on the public validation split using
+      <a href="https://github.com/openai/tiktoken" class="underline hover:text-gray-600">GPT-2 BPE tokenizer</a>
+      (vocab 50257) with 1024-token context windows, batch size 8.
+      Model parameter limit: 100M. Eval wall-clock limit: 5 minutes.
+      Final rankings use a separate hidden test split.
+    </p>
+  </footer>
+
+  <script>
+    const MEDAL = ["🥇", "🥈", "🥉"];
+    const ROW_CLASSES = ["rank-gold", "rank-silver", "rank-bronze"];
+
+    function fmt(n) {
+      if (n == null) return "—";
+      if (n >= 1e9) return (n / 1e9).toFixed(2) + "B";
+      if (n >= 1e6) return (n / 1e6).toFixed(1) + "M";
+      if (n >= 1e3) return (n / 1e3).toFixed(0) + "K";
+      return n.toString();
+    }
+
+    function fmtPPL(v) {
+      if (v == null) return "—";
+      return parseFloat(v).toFixed(4);
+    }
+
+    function fmtTime(sec) {
+      if (sec == null) return "—";
+      return sec.toFixed(1) + "s";
+    }
+
+    function overLimit(params) {
+      return params != null && params > 100_000_000;
+    }
+
+    async function load() {
+      try {
+        const res = await fetch("./leaderboard.json?_=" + Date.now());
+        const data = await res.json();
+
+        document.getElementById("loading").classList.add("hidden");
+
+        // Update badge
+        const badge = document.getElementById("update-badge");
+        const updatedAt = document.getElementById("updated-at");
+        if (data.updated_at && data.updated_at !== "not yet run") {
+          updatedAt.textContent = "Updated " + data.updated_at;
+          badge.querySelector("span.rounded-full").classList.replace("bg-gray-400", "bg-green-400");
+        } else {
+          updatedAt.textContent = "Not yet run";
+        }
+
+        // Stats bar
+        document.getElementById("stat-teams").textContent = data.entries.length;
+        document.getElementById("stat-best").textContent =
+          data.entries.length ? fmtPPL(data.entries[0].perplexity) : "—";
+        document.getElementById("stat-split").textContent = data.data_split || "val";
+        document.getElementById("stat-limit").textContent =
+          data.time_limit_sec ? data.time_limit_sec + "s" : "—";
+
+        if (!data.entries.length && !data.errors.length) {
+          document.getElementById("empty").classList.remove("hidden");
+          return;
+        }
+
+        document.getElementById("table-wrap").classList.remove("hidden");
+
+        // Build table rows
+        const tbody = document.getElementById("leaderboard-body");
+        data.entries.forEach((e, i) => {
+          const tr = document.createElement("tr");
+          const rowClass = i < 3 ? ROW_CLASSES[i] : "hover:bg-gray-50";
+          tr.className = rowClass + " transition-colors";
+
+          const medal = i < 3 ? MEDAL[i] : "";
+          const over = overLimit(e.total_params);
+          const paramStr = over
+            ? `<span class="text-red-500 font-medium">${fmt(e.total_params)} ⚠</span>`
+            : fmt(e.total_params);
+
+          tr.innerHTML = `
+            <td class="px-5 py-3.5 text-center text-base">${medal || `<span class="text-gray-400 font-medium">${e.rank}</span>`}</td>
+            <td class="px-5 py-3.5 font-medium text-gray-800">${escHtml(e.group)}</td>
+            <td class="px-5 py-3.5 text-right mono font-medium text-indigo-700 text-base">${fmtPPL(e.perplexity)}</td>
+            <td class="px-5 py-3.5 text-right text-gray-500 mono text-xs">${paramStr}</td>
+            <td class="px-5 py-3.5 text-right text-gray-400 mono text-xs">${fmtTime(e.wall_time_sec)}</td>
+          `;
+          tbody.appendChild(tr);
+        });
+
+        // Errors
+        if (data.errors && data.errors.length) {
+          const errSection = document.getElementById("errors-section");
+          errSection.classList.remove("hidden");
+          document.getElementById("error-count").textContent = data.errors.length;
+          const errBody = document.getElementById("errors-body");
+          data.errors.forEach(e => {
+            const tr = document.createElement("tr");
+            tr.className = "hover:bg-red-50";
+            tr.innerHTML = `
+              <td class="px-5 py-2 font-medium text-gray-700">${escHtml(e.group)}</td>
+              <td class="px-5 py-2 text-red-500 font-medium">${escHtml(e.status)}</td>
+              <td class="px-5 py-2 text-gray-500 mono text-xs">${escHtml(e.error || "")}</td>
+            `;
+            errBody.appendChild(tr);
+          });
+        }
+
+      } catch (err) {
+        document.getElementById("loading").innerHTML =
+          `<p class="text-red-500 text-sm">Failed to load leaderboard: ${err.message}</p>`;
+      }
+    }
+
+    function escHtml(s) {
+      return String(s)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    load();
+  </script>
+</body>
+</html>

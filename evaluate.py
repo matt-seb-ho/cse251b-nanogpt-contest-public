@@ -200,6 +200,10 @@ Examples:
     parser.add_argument("--block_size", type=int, default=1024)
     parser.add_argument("--batch_size", type=int, default=8)
     parser.add_argument("--device", type=str, default="cuda")
+    parser.add_argument(
+        "--output_json", type=str, default=None,
+        help="If provided, write results as JSON to this path (used by TA batch eval script).",
+    )
     args = parser.parse_args()
 
     if args.device == "cuda" and not torch.cuda.is_available():
@@ -259,6 +263,19 @@ Examples:
     if args.hf_repo:
         print(f"\nThis is what the TAs will see when evaluating your submission.")
         print(f"If the above looks correct, your submission is ready.")
+
+    if args.output_json:
+        import json
+        output = {
+            "perplexity": results["perplexity"],
+            "avg_loss_nats": results["avg_loss_nats"],
+            "total_tokens_evaluated": results["total_tokens_evaluated"],
+            "total_params": total_params,
+            "eval_time_sec": round(elapsed, 2),
+        }
+        with open(args.output_json, "w") as f:
+            json.dump(output, f, indent=2)
+        print(f"\nResults written to {args.output_json}")
 
 
 if __name__ == "__main__":
