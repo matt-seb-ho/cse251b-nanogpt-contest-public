@@ -1,0 +1,46 @@
+{
+  "os":  "macOS-15.7.5-arm64-arm-64bit-Mach-O",
+  "python":  "CPython 3.13.13",
+  "startedAt":  "2026-04-20T23:01:38.315833Z",
+  "args":  [
+    "--device=mps",
+    "--compile=False",
+    "--n_layer=6",
+    "--n_head=6",
+    "--n_embd=384",
+    "--max_iters=200"
+  ],
+  "program":  "/Users/grant/Documents/UCSD/SP26/CSE 251B/cse251b-nanogpt/train.py",
+  "codePath":  "train.py",
+  "codePathLocal":  "train.py",
+  "git":  {
+    "remote":  "https://github.com/grant-cai/cse251b-nanogpt.git",
+    "commit":  "4d830dbece855987d7ec5f7dcf8e1756053f4904"
+  },
+  "email":  "grantcai@umail.ucsb.edu",
+  "root":  "/Users/grant/Documents/UCSD/SP26/CSE 251B/cse251b-nanogpt",
+  "host":  "Mac.lan1",
+  "executable":  "/Users/grant/Documents/UCSD/SP26/CSE 251B/cse251b-nanogpt/.venv/bin/python",
+  "cpu_count":  8,
+  "cpu_count_logical":  8,
+  "disk":  {
+    "/":  {
+      "total":  "494384795648",
+      "used":  "187755364352"
+    }
+  },
+  "memory":  {
+    "total":  "17179869184"
+  },
+  "apple":  {
+    "name":  "Apple M3",
+    "ecpuCores":  4,
+    "pcpuCores":  4,
+    "gpuCores":  10,
+    "memoryGb":  16,
+    "swapTotalBytes":  "1073741824",
+    "ramTotalBytes":  "17179869184",
+    "macModel":  "Mac15,12"
+  },
+  "writerId":  "5mnv4jztdnjcxrielnqxsoxlgplwui8j"
+}

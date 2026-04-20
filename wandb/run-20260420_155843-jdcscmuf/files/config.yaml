@@ -1,0 +1,106 @@
+_wandb:
+    value:
+        cli_version: 0.26.0
+        e:
+            m4a0xpy07wunccilcqatv758f1jbnp4d:
+                args:
+                    - --device=mps
+                    - --compile=False
+                    - --n_layer=6
+                    - --n_head=6
+                    - --n_embd=384
+                    - --max_iters=200
+                codePath: train.py
+                codePathLocal: train.py
+                email: grantcai@umail.ucsb.edu
+                executable: /Users/grant/Documents/UCSD/SP26/CSE 251B/cse251b-nanogpt/.venv/bin/python
+                git:
+                    commit: 4d830dbece855987d7ec5f7dcf8e1756053f4904
+                    remote: https://github.com/grant-cai/cse251b-nanogpt.git
+                host: Mac.lan1
+                os: macOS-15.7.5-arm64-arm-64bit-Mach-O
+                program: /Users/grant/Documents/UCSD/SP26/CSE 251B/cse251b-nanogpt/train.py
+                python: CPython 3.13.13
+                root: /Users/grant/Documents/UCSD/SP26/CSE 251B/cse251b-nanogpt
+                startedAt: "2026-04-20T22:58:43.185052Z"
+                writerId: m4a0xpy07wunccilcqatv758f1jbnp4d
+        m: []
+        python_version: 3.13.13
+        t:
+            "1":
+                - 1
+            "2":
+                - 1
+            "3":
+                - 13
+                - 16
+            "4": 3.13.13
+            "5": 0.26.0
+            "12": 0.26.0
+            "13": darwin-arm64
+always_save_checkpoint:
+    value: true
+backend:
+    value: nccl
+batch_size:
+    value: 12
+beta1:
+    value: 0.9
+beta2:
+    value: 0.95
+bias:
+    value: false
+block_size:
+    value: 1024
+compile:
+    value: false
+dataset:
+    value: openwebtext
+decay_lr:
+    value: true
+device:
+    value: mps
+dropout:
+    value: 0
+dtype:
+    value: float16
+eval_interval:
+    value: 2000
+eval_iters:
+    value: 200
+eval_only:
+    value: false
+grad_clip:
+    value: 1
+gradient_accumulation_steps:
+    value: 40
+init_from:
+    value: scratch
+learning_rate:
+    value: 0.0006
+log_interval:
+    value: 1
+lr_decay_iters:
+    value: 600000
+max_iters:
+    value: 200
+min_lr:
+    value: 6e-05
+n_embd:
+    value: 384
+n_head:
+    value: 6
+n_layer:
+    value: 6
+out_dir:
+    value: out
+wandb_log:
+    value: true
+wandb_project:
+    value: owt
+wandb_run_name:
+    value: gpt2
+warmup_iters:
+    value: 2000
+weight_decay:
+    value: 0.1
