@@ -1,7 +1,206 @@
 {
-  "updated_at": "not yet run",
+  "updated_at": "2026-04-30 23:23 UTC",
   "data_split": "val",
   "time_limit_sec": 300,
-  "entries": [],
-  "errors": []
+  "entries": [
+    {
+      "rank": 1,
+      "group": "offercome",
+      "perplexity": 23.7863,
+      "total_params": 96734720,
+      "eval_time_sec": 39.39,
+      "wall_time_sec": 44.3
+    },
+    {
+      "rank": 2,
+      "group": "deep-learners",
+      "perplexity": 43.0952,
+      "total_params": 51454464,
+      "eval_time_sec": 23.57,
+      "wall_time_sec": 27.6
+    },
+    {
+      "rank": 3,
+      "group": "solo",
+      "perplexity": 43.9403,
+      "total_params": 91162880,
+      "eval_time_sec": 38.06,
+      "wall_time_sec": 44.5
+    },
+    {
+      "rank": 4,
+      "group": "ding-group",
+      "perplexity": 51.3529,
+      "total_params": 98906976,
+      "eval_time_sec": 42.15,
+      "wall_time_sec": 47.3
+    },
+    {
+      "rank": 5,
+      "group": "a-sheep",
+      "perplexity": 227.5992,
+      "total_params": 7357568,
+      "eval_time_sec": 97.03,
+      "wall_time_sec": 201.6
+    },
+    {
+      "rank": 6,
+      "group": "wilt-bam-kobe",
+      "perplexity": 505.29,
+      "total_params": 19435776,
+      "eval_time_sec": 13.44,
+      "wall_time_sec": 16.6
+    },
+    {
+      "rank": 7,
+      "group": "renren",
+      "perplexity": 8592.4012,
+      "total_params": 13393664,
+      "eval_time_sec": 6.12,
+      "wall_time_sec": 9.5
+    },
+    {
+      "rank": 8,
+      "group": "zw",
+      "perplexity": 50363.6738,
+      "total_params": 6963840,
+      "eval_time_sec": 20.22,
+      "wall_time_sec": 22.9
+    },
+    {
+      "rank": 9,
+      "group": "rabong",
+      "perplexity": 59405.7585,
+      "total_params": 13393664,
+      "eval_time_sec": 13.99,
+      "wall_time_sec": 18.2
+    }
+  ],
+  "errors": [
+    {
+      "group": "arknights",
+      "status": "ERROR",
+      "error": "test/../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    load_f"
+    },
+    {
+      "group": "binners-and-losers",
+      "status": "ERROR",
+      "error": "se251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    load_fn = impor"
+    },
+    {
+      "group": "bumblebee",
+      "status": "ERROR",
+      "error": "n\n    load_fn = import_load_model(model_dir)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 58, in import_load_mo"
+    },
+    {
+      "group": "class",
+      "status": "ERROR",
+      "error": "-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    lo"
+    },
+    {
+      "group": "cpzhou",
+      "status": "ERROR",
+      "error": "ast):\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/eva"
+    },
+    {
+      "group": "dbdx",
+      "status": "ERROR",
+      "error": "t-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    l"
+    },
+    {
+      "group": "dlcq",
+      "status": "ERROR",
+      "error": "t-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    l"
+    },
+    {
+      "group": "doubao-4-7",
+      "status": "ERROR",
+      "error": "est/../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    load_fn"
+    },
+    {
+      "group": "fire-fighter",
+      "status": "DOWNLOAD_FAILED",
+      "error": "401 Client Error. (Request ID: Root=1-69f3e7d3-656e425c45f855fa5e1a423a;b2f14a9f-f370-4317-8ef0-45df517ef92b)\n\nRepository Not Found for url: https://huggingface.co/api/models/acai103107/CSE251B_NanoGP"
+    },
+    {
+      "group": "gli",
+      "status": "ERROR",
+      "error": "pt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    "
+    },
+    {
+      "group": "group7",
+      "status": "ERROR",
+      "error": "contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    loa"
+    },
+    {
+      "group": "hpp-ai",
+      "status": "ERROR",
+      "error": "contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    loa"
+    },
+    {
+      "group": "indigo-octothorpe",
+      "status": "ERROR",
+      "error": "cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    load_fn = impo"
+    },
+    {
+      "group": "liw069",
+      "status": "ERROR",
+      "error": "contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    loa"
+    },
+    {
+      "group": "lyra",
+      "status": "ERROR",
+      "error": "c/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 225, in main\n    raise FileNotFoundError(\nFileNotFoundError:"
+    },
+    {
+      "group": "nanocloud01",
+      "status": "ERROR",
+      "error": "\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate"
+    },
+    {
+      "group": "oom",
+      "status": "ERROR",
+      "error": "pt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    "
+    },
+    {
+      "group": "otterly-intelligent",
+      "status": "ERROR",
+      "error": "e251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    load_fn = import"
+    },
+    {
+      "group": "pico-on-my-gptacos",
+      "status": "DOWNLOAD_FAILED",
+      "error": "401 Client Error. (Request ID: Root=1-69f3e854-1008690e336e994e776ef0b8;d5f5e905-8467-4acf-b489-bcfd032716c6)\n\nCannot access gated repo for url https://huggingface.co/jankwong705/picoLM/resolve/58a0a8"
+    },
+    {
+      "group": "porto-s-bakers",
+      "status": "ERROR",
+      "error": "../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    load_fn = i"
+    },
+    {
+      "group": "qudie",
+      "status": "ERROR",
+      "error": "-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    lo"
+    },
+    {
+      "group": "team-awesome",
+      "status": "ERROR",
+      "error": "t/../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    load_fn ="
+    },
+    {
+      "group": "who-s-adam",
+      "status": "ERROR",
+      "error": "est/../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    load_fn"
+    },
+    {
+      "group": "z-sw",
+      "status": "ERROR",
+      "error": "Traceback (most recent call last):\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse25"
+    },
+    {
+      "group": "zz-top",
+      "status": "ERROR",
+      "error": "contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    loa"
+    }
+  ]
 }
