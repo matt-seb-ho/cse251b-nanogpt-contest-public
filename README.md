@@ -251,3 +251,11 @@ A: The eval script uses a context window of 1024 tokens (matching GPT-2). Your m
 
 **Q: Can I train on the validation set?**
 A: No. The validation set is for evaluation only. We will check for suspiciously low val PPL coupled with high test PPL, which would indicate val-set overfitting.
+
+
+
+
+
+# Install
+
+Use environment.yml to build a conda environment. Within this environment, pytorch is setup to run with cuda versions 12.0-12.2 (cuda=12.1 on install files)
