@@ -61,18 +61,18 @@ class CausalSelfAttention(nn.Module):
         # calculate query, key, values for all heads in batch and move head forward to be the batch dim
         q = self.Q(x).view(B, T, self.n_head, head_dim).transpose(1,2)
         k = self.K(x).view(B, T, self.n_head, head_dim).transpose(1,2)
-        v = self.V(x).view(B, T, self.n_head, head_dim).tranpose(1,2)
+        v = self.V(x).view(B, T, self.n_head, head_dim).transpose(1,2)
 
         alibi = self._alibi_bias(T, x.device)
-        causal_mask = torch.triu(torch.full((T,T),float('inf'),device=x.device),diagonal=1)
+        causal_mask = torch.triu(torch.full((T,T),float('-inf'),device=x.device),diagonal=1)
         attn_mask = alibi + causal_mask
 
         # output projection
         y = torch.nn.functional.scaled_dot_product_attention(
             q, k, v,
             attn_mask = attn_mask,
-            dropout = self.dropout if self.training else 0,
-            if_causal = False
+            dropout_p = self.dropout if self.training else 0,
+            is_causal = False
         )
         y = y.transpose(1,2).contiguous().view(B,T,C)
         y = self.resid_dropout(self.c_proj(y))
@@ -97,7 +97,7 @@ class Block(nn.Module):
         self.ln_1 = LayerNorm(config.n_embd, bias=config.bias)
         self.attn = CausalSelfAttention(config)
         self.ln_2 = LayerNorm(config.n_embd, bias=config.bias)
-        self.mlp = SwiGLUFNN(config)
+        self.mlp = SwiGLUFFN(config)
 
     def forward(self, x):
         x = x + self.attn(self.ln_1(x))
