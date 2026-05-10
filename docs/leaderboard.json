@@ -1,206 +1,291 @@
 {
-  "updated_at": "2026-04-30 23:23 UTC",
+  "updated_at": "2026-05-10 15:37 UTC",
   "data_split": "val",
   "time_limit_sec": 300,
   "entries": [
     {
       "rank": 1,
       "group": "offercome",
-      "perplexity": 23.7863,
+      "perplexity": 21.9858,
       "total_params": 96734720,
-      "eval_time_sec": 39.39,
-      "wall_time_sec": 44.3
+      "eval_time_sec": 37.81,
+      "wall_time_sec": 41.1
     },
     {
       "rank": 2,
-      "group": "deep-learners",
-      "perplexity": 43.0952,
-      "total_params": 51454464,
-      "eval_time_sec": 23.57,
-      "wall_time_sec": 27.6
+      "group": "nanocloud01",
+      "perplexity": 22.2732,
+      "total_params": 99032320,
+      "eval_time_sec": 43.27,
+      "wall_time_sec": 45.8
     },
     {
       "rank": 3,
-      "group": "solo",
-      "perplexity": 43.9403,
-      "total_params": 91162880,
-      "eval_time_sec": 38.06,
-      "wall_time_sec": 44.5
+      "group": "dlcq",
+      "perplexity": 26.7014,
+      "total_params": 98217798,
+      "eval_time_sec": 33.03,
+      "wall_time_sec": 35.7
     },
     {
       "rank": 4,
-      "group": "ding-group",
-      "perplexity": 51.3529,
-      "total_params": 98906976,
-      "eval_time_sec": 42.15,
-      "wall_time_sec": 47.3
+      "group": "solo",
+      "perplexity": 27.7911,
+      "total_params": 93128960,
+      "eval_time_sec": 38.23,
+      "wall_time_sec": 41.2
     },
     {
       "rank": 5,
-      "group": "a-sheep",
-      "perplexity": 227.5992,
-      "total_params": 7357568,
-      "eval_time_sec": 97.03,
-      "wall_time_sec": 201.6
+      "group": "fire-fighter",
+      "perplexity": 32.7089,
+      "total_params": 85320000,
+      "eval_time_sec": 36.12,
+      "wall_time_sec": 39.2
     },
     {
       "rank": 6,
-      "group": "wilt-bam-kobe",
-      "perplexity": 505.29,
-      "total_params": 19435776,
-      "eval_time_sec": 13.44,
-      "wall_time_sec": 16.6
+      "group": "cpzhou",
+      "perplexity": 34.4832,
+      "total_params": 91832960,
+      "eval_time_sec": 39.63,
+      "wall_time_sec": 42.8
     },
     {
       "rank": 7,
-      "group": "renren",
-      "perplexity": 8592.4012,
-      "total_params": 13393664,
-      "eval_time_sec": 6.12,
-      "wall_time_sec": 9.5
+      "group": "bumblebee",
+      "perplexity": 39.9613,
+      "total_params": 37437312,
+      "eval_time_sec": 28.95,
+      "wall_time_sec": 31.2
     },
     {
       "rank": 8,
-      "group": "zw",
-      "perplexity": 50363.6738,
-      "total_params": 6963840,
-      "eval_time_sec": 20.22,
-      "wall_time_sec": 22.9
+      "group": "team-awesome",
+      "perplexity": 41.4169,
+      "total_params": 91903360,
+      "eval_time_sec": 33.27,
+      "wall_time_sec": 35.7
     },
     {
       "rank": 9,
+      "group": "ding-group",
+      "perplexity": 41.7973,
+      "total_params": 98906976,
+      "eval_time_sec": 39.61,
+      "wall_time_sec": 42.6
+    },
+    {
+      "rank": 10,
+      "group": "orange-cat",
+      "perplexity": 55.1004,
+      "total_params": 98785792,
+      "eval_time_sec": 43.22,
+      "wall_time_sec": 46.5
+    },
+    {
+      "rank": 11,
+      "group": "wilt-bam-kobe",
+      "perplexity": 70.5703,
+      "total_params": 19435776,
+      "eval_time_sec": 12.48,
+      "wall_time_sec": 14.6
+    },
+    {
+      "rank": 12,
+      "group": "a-sheep",
+      "perplexity": 87.8318,
+      "total_params": 51463168,
+      "eval_time_sec": 22.06,
+      "wall_time_sec": 24.6
+    },
+    {
+      "rank": 13,
+      "group": "dbdx",
+      "perplexity": 375.9356,
+      "total_params": 16169472,
+      "eval_time_sec": 21.78,
+      "wall_time_sec": 24.0
+    },
+    {
+      "rank": 14,
+      "group": "class",
+      "perplexity": 582.8395,
+      "total_params": 16287488,
+      "eval_time_sec": 7.76,
+      "wall_time_sec": 9.9
+    },
+    {
+      "rank": 15,
+      "group": "zw",
+      "perplexity": 50417.9712,
+      "total_params": 6963840,
+      "eval_time_sec": 7.0,
+      "wall_time_sec": 8.8
+    },
+    {
+      "rank": 16,
       "group": "rabong",
       "perplexity": 59405.7585,
       "total_params": 13393664,
-      "eval_time_sec": 13.99,
-      "wall_time_sec": 18.2
+      "eval_time_sec": 5.63,
+      "wall_time_sec": 7.5
     }
   ],
   "errors": [
     {
       "group": "arknights",
       "status": "ERROR",
-      "error": "test/../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    load_f"
+      "category": "missing_model_py",
+      "hint": "Your HuggingFace repo doesn't contain `model.py` at the top level. Upload your model class file (with `load_model()`) alongside `checkpoint.pt`.",
+      "error": "FileNotFoundError: Expected model.py in /root/private_contest/results/downloads/arknights. Your submission directory must contain a model.py with a load_model() function."
+    },
+    {
+      "group": "aufklarng",
+      "status": "ERROR",
+      "category": "missing_model_py",
+      "hint": "Your HuggingFace repo doesn't contain `model.py` at the top level. Upload your model class file (with `load_model()`) alongside `checkpoint.pt`.",
+      "error": "FileNotFoundError: Expected model.py in /root/private_contest/results/downloads/aufklarng. Your submission directory must contain a model.py with a load_model() function."
     },
     {
       "group": "binners-and-losers",
       "status": "ERROR",
-      "error": "se251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    load_fn = impor"
+      "category": "missing_model_py",
+      "hint": "Your HuggingFace repo doesn't contain `model.py` at the top level. Upload your model class file (with `load_model()`) alongside `checkpoint.pt`.",
+      "error": "FileNotFoundError: Expected model.py in /root/private_contest/results/downloads/binners-and-losers. Your submission directory must contain a model.py with a load_model() function."
     },
     {
-      "group": "bumblebee",
+      "group": "deep-learners",
       "status": "ERROR",
-      "error": "n\n    load_fn = import_load_model(model_dir)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 58, in import_load_mo"
-    },
-    {
-      "group": "class",
-      "status": "ERROR",
-      "error": "-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    lo"
-    },
-    {
-      "group": "cpzhou",
-      "status": "ERROR",
-      "error": "ast):\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/eva"
-    },
-    {
-      "group": "dbdx",
-      "status": "ERROR",
-      "error": "t-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    l"
-    },
-    {
-      "group": "dlcq",
-      "status": "ERROR",
-      "error": "t-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    l"
+      "category": "missing_model_py",
+      "hint": "Your HuggingFace repo doesn't contain `model.py` at the top level. Upload your model class file (with `load_model()`) alongside `checkpoint.pt`.",
+      "error": "FileNotFoundError: Expected model.py in /root/private_contest/results/downloads/deep-learners. Your submission directory must contain a model.py with a load_model() function."
     },
     {
       "group": "doubao-4-7",
       "status": "ERROR",
-      "error": "est/../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    load_fn"
-    },
-    {
-      "group": "fire-fighter",
-      "status": "DOWNLOAD_FAILED",
-      "error": "401 Client Error. (Request ID: Root=1-69f3e7d3-656e425c45f855fa5e1a423a;b2f14a9f-f370-4317-8ef0-45df517ef92b)\n\nRepository Not Found for url: https://huggingface.co/api/models/acai103107/CSE251B_NanoGP"
+      "category": "missing_model_py",
+      "hint": "Your HuggingFace repo doesn't contain `model.py` at the top level. Upload your model class file (with `load_model()`) alongside `checkpoint.pt`.",
+      "error": "FileNotFoundError: Expected model.py in /root/private_contest/results/downloads/doubao-4-7. Your submission directory must contain a model.py with a load_model() function."
     },
     {
       "group": "gli",
       "status": "ERROR",
-      "error": "pt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    "
+      "category": "missing_model_py",
+      "hint": "Your HuggingFace repo doesn't contain `model.py` at the top level. Upload your model class file (with `load_model()`) alongside `checkpoint.pt`.",
+      "error": "FileNotFoundError: Expected model.py in /root/private_contest/results/downloads/gli. Your submission directory must contain a model.py with a load_model() function."
     },
     {
       "group": "group7",
       "status": "ERROR",
-      "error": "contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    loa"
+      "category": "missing_model_py",
+      "hint": "Your HuggingFace repo doesn't contain `model.py` at the top level. Upload your model class file (with `load_model()`) alongside `checkpoint.pt`.",
+      "error": "FileNotFoundError: Expected model.py in /root/private_contest/results/downloads/group7. Your submission directory must contain a model.py with a load_model() function."
     },
     {
       "group": "hpp-ai",
       "status": "ERROR",
-      "error": "contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    loa"
+      "category": "runtime_error",
+      "hint": "Your model raised an exception during forward pass. Check that `model(input_ids)` accepts a LongTensor of shape (batch, seq_len) and returns logits of shape (batch, seq_len, 50257).",
+      "error": "RuntimeError: Error(s) in loading state_dict for GPT:"
     },
     {
       "group": "indigo-octothorpe",
       "status": "ERROR",
-      "error": "cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    load_fn = impo"
+      "category": "missing_model_py",
+      "hint": "Your HuggingFace repo doesn't contain `model.py` at the top level. Upload your model class file (with `load_model()`) alongside `checkpoint.pt`.",
+      "error": "FileNotFoundError: Expected model.py in /root/private_contest/results/downloads/indigo-octothorpe. Your submission directory must contain a model.py with a load_model() function."
     },
     {
       "group": "liw069",
       "status": "ERROR",
-      "error": "contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    loa"
+      "category": "missing_model_py",
+      "hint": "Your HuggingFace repo doesn't contain `model.py` at the top level. Upload your model class file (with `load_model()`) alongside `checkpoint.pt`.",
+      "error": "FileNotFoundError: Expected model.py in /root/private_contest/results/downloads/liw069. Your submission directory must contain a model.py with a load_model() function."
     },
     {
       "group": "lyra",
       "status": "ERROR",
-      "error": "c/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 225, in main\n    raise FileNotFoundError(\nFileNotFoundError:"
+      "category": "missing_checkpoint",
+      "hint": "Your repo is missing `checkpoint.pt`. Either name your weights file `checkpoint.pt` or use `--checkpoint_filename` and tell the TAs.",
+      "error": "FileNotFoundError: Checkpoint not found: /root/private_contest/results/downloads/lyra/checkpoint.pt"
     },
     {
-      "group": "nanocloud01",
+      "group": "maggie",
       "status": "ERROR",
-      "error": "\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate"
+      "category": "missing_model_py",
+      "hint": "Your HuggingFace repo doesn't contain `model.py` at the top level. Upload your model class file (with `load_model()`) alongside `checkpoint.pt`.",
+      "error": "FileNotFoundError: Expected model.py in /root/private_contest/results/downloads/maggie. Your submission directory must contain a model.py with a load_model() function."
     },
     {
       "group": "oom",
       "status": "ERROR",
-      "error": "pt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    "
+      "category": "missing_model_py",
+      "hint": "Your HuggingFace repo doesn't contain `model.py` at the top level. Upload your model class file (with `load_model()`) alongside `checkpoint.pt`.",
+      "error": "FileNotFoundError: Expected model.py in /root/private_contest/results/downloads/oom. Your submission directory must contain a model.py with a load_model() function."
     },
     {
       "group": "otterly-intelligent",
       "status": "ERROR",
-      "error": "e251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    load_fn = import"
+      "category": "missing_model_py",
+      "hint": "Your HuggingFace repo doesn't contain `model.py` at the top level. Upload your model class file (with `load_model()`) alongside `checkpoint.pt`.",
+      "error": "FileNotFoundError: Expected model.py in /root/private_contest/results/downloads/otterly-intelligent. Your submission directory must contain a model.py with a load_model() function."
     },
     {
       "group": "pico-on-my-gptacos",
       "status": "DOWNLOAD_FAILED",
-      "error": "401 Client Error. (Request ID: Root=1-69f3e854-1008690e336e994e776ef0b8;d5f5e905-8467-4acf-b489-bcfd032716c6)\n\nCannot access gated repo for url https://huggingface.co/jankwong705/picoLM/resolve/58a0a8"
+      "category": "download_failed",
+      "hint": "Couldn't download your repo from HuggingFace. Check the repo ID and that the repo is public (or shared with the TA accounts).",
+      "error": "403 Client Error. (Request ID: Root=1-6a00a924-3b0fcc48411339142efb43d3;59896a9c-b40b-4968-b152-0564b2b96349)\n\nCannot access gated repo for url https://huggingface.co/jankwong705/picoLM/resolve/df7390"
     },
     {
       "group": "porto-s-bakers",
       "status": "ERROR",
-      "error": "../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    load_fn = i"
+      "category": "missing_model_py",
+      "hint": "Your HuggingFace repo doesn't contain `model.py` at the top level. Upload your model class file (with `load_model()`) alongside `checkpoint.pt`.",
+      "error": "FileNotFoundError: Expected model.py in /root/private_contest/results/downloads/porto-s-bakers. Your submission directory must contain a model.py with a load_model() function."
     },
     {
       "group": "qudie",
       "status": "ERROR",
-      "error": "-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    lo"
+      "category": "import_error",
+      "hint": "Couldn't import your `model.py`. Verify your submission runs locally with `python evaluate.py --model_dir ./your_dir/ --data val.bin` before pushing to the Hub.",
+      "error": "SyntaxError: source code string cannot contain null bytes"
     },
     {
-      "group": "team-awesome",
+      "group": "renren",
       "status": "ERROR",
-      "error": "t/../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    load_fn ="
+      "category": "other",
+      "hint": "Unknown error. Email the TAs with your group name to get the full eval log.",
+      "error": "AttributeError: 'NoneType' object has no attribute '__dict__'. Did you mean: '__dir__'?"
+    },
+    {
+      "group": "udiegpt",
+      "status": "ERROR",
+      "category": "import_error",
+      "hint": "Couldn't import your `model.py`. Verify your submission runs locally with `python evaluate.py --model_dir ./your_dir/ --data val.bin` before pushing to the Hub.",
+      "error": "SyntaxError: source code string cannot contain null bytes"
     },
     {
       "group": "who-s-adam",
       "status": "ERROR",
-      "error": "est/../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    load_fn"
+      "category": "missing_model_py",
+      "hint": "Your HuggingFace repo doesn't contain `model.py` at the top level. Upload your model class file (with `load_model()`) alongside `checkpoint.pt`.",
+      "error": "FileNotFoundError: Expected model.py in /root/private_contest/results/downloads/who-s-adam. Your submission directory must contain a model.py with a load_model() function."
     },
     {
       "group": "z-sw",
       "status": "ERROR",
-      "error": "Traceback (most recent call last):\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse25"
+      "category": "missing_checkpoint",
+      "hint": "Your repo is missing `checkpoint.pt`. Either name your weights file `checkpoint.pt` or use `--checkpoint_filename` and tell the TAs.",
+      "error": "FileNotFoundError: Checkpoint not found: /root/private_contest/results/downloads/z-sw/checkpoint.pt"
     },
     {
       "group": "zz-top",
-      "status": "ERROR",
-      "error": "contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 282, in <module>\n    main()\n  File \"/root/cse251b-nanogpt-contest/../cse251b-nanogpt-contest-public/evaluate.py\", line 222, in main\n    loa"
+      "status": "DOWNLOAD_FAILED",
+      "category": "download_failed",
+      "hint": "Couldn't download your repo from HuggingFace. Check the repo ID and that the repo is public (or shared with the TA accounts).",
+      "error": "403 Client Error. (Request ID: Root=1-6a00a9c4-61a9b8b135dbb2bf24378d81;0775ea92-9f85-4428-b454-e114389618c0)\n\nCannot access gated repo for url https://huggingface.co/ZhichengWang520/cse251b-zz-top/re"
     }
   ]
 }
