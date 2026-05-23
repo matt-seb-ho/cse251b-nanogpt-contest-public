@@ -170,24 +170,15 @@ class GPT(nn.Module):
         device = idx.device
         b, t = idx.size()
         assert t <= self.config.block_size, f"Cannot forward sequence of length {t}, block size is only {self.config.block_size}"
-        # pos = torch.arange(0, t, dtype=torch.long, device=device) # shape (t)
 
-        # forward the GPT model itself
-        tok_emb = self.transformer.wte(idx) # token embeddings of shape (b, t, n_embd)
-        # pos_emb = self.transformer.wpe(pos) # position embeddings of shape (t, n_embd)
+        tok_emb = self.transformer.wte(idx)
         x = self.transformer.drop(tok_emb)
         for block in self.transformer.h:
             x = block(x)
         x = self.transformer.ln_f(x)
 
-        if targets is not None:
-            # if we are given some desired targets also calculate the loss
-            logits = self.lm_head(x)
-            loss = F.cross_entropy(logits.view(-1, logits.size(-1)), targets.view(-1), ignore_index=-1)
-        else:
-            # inference-time mini-optimization: only forward the lm_head on the very last position
-            logits = self.lm_head(x[:, [-1], :]) # note: using list [-1] to preserve the time dim
-            loss = None
+        logits = self.lm_head(x)  # always full sequence
+        loss = F.cross_entropy(logits.view(-1, logits.size(-1)), targets.view(-1), ignore_index=-1) if targets is not None else None
 
         return logits, loss
 
@@ -328,6 +319,18 @@ class GPT(nn.Module):
 
         return idx
     
+class GPTEvalWrapper(nn.Module):
+    def __init__(self, model):
+        super().__init__()
+        self.model = model
+
+    def forward(self, input_ids):
+        logits, _ = self.model(input_ids)
+        return logits[:, :, :50257]
+
+    def parameters(self):
+        return self.model.parameters()
+    
 def load_model(checkpoint_path: str, device: str = "cuda") -> torch.nn.Module:
     """
     Load your trained model from a checkpoint.
@@ -344,7 +347,6 @@ def load_model(checkpoint_path: str, device: str = "cuda") -> torch.nn.Module:
     Returns:
         model: nn.Module in eval mode
     """
-    # Load checkpoint
     checkpoint = torch.load(checkpoint_path, map_location=device)
     model_args = checkpoint['model_args']
     model = GPT(GPTConfig(**model_args))
@@ -354,26 +356,8 @@ def load_model(checkpoint_path: str, device: str = "cuda") -> torch.nn.Module:
         if k.startswith(unwanted_prefix):
             state_dict[k[len(unwanted_prefix):]] = state_dict.pop(k)
     model.load_state_dict(state_dict)
-
     model.to(device)
     model.eval()
-
-    # evaluate expects logits = model(input_ids), logits of shape (batch, seq_len, vocab_size)
-    # Need to change GPT.forward() so that it returns full logits as a tensor
-    # This wrapper makes our current outputs work with evaluate.py for now
-    class EvalWrapper(nn.Module):
-        '''
-            evaluate expects logits = model(input_ids), logits of shape (batch, seq_len, vocab_size)
-            Need to change GPT.forward() so that it returns full logits as a tensor
-            This wrapper makes our current outputs work with evaluate.py for now
-        '''
-        def __init__(self, m): super().__init__(); self.m = m
-        def forward(self, input_ids):
-            dummy_targets = torch.zeros_like(input_ids) # Force GPT.forward() to compute logits for the full sequence
-            logits, _ = self.m(input_ids, dummy_targets) # Logits doesn't use the targets at all, just want the logits
-            return logits[:, :, :50257]
-        def parameters(self): return self.m.parameters()
-
-    return EvalWrapper(model)
+    return GPTEvalWrapper(model)
     
 

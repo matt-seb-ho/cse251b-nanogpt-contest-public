@@ -18,7 +18,7 @@ if os.path.isfile("hf_token.txt"):
 local_dir = "edu_fineweb10B"
 remote_name = "sample-10BT"
 shard_size = int(1e8)
-max_shards = 2
+max_shards = 14
 
 DATA_CACHE_DIR = os.path.join(os.path.dirname(__file__), local_dir)
 os.makedirs(DATA_CACHE_DIR, exist_ok=True)
