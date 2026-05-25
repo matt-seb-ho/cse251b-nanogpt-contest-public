@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-21 01:54 UTC",
+  "updated_at": "2026-05-25 09:58 UTC",
   "data_split": "val",
   "time_limit_sec": 300,
   "entries": [
@@ -8,192 +8,240 @@
       "group": "nanocloud01",
       "perplexity": 19.4375,
       "total_params": 96643584,
-      "eval_time_sec": 46.13,
-      "wall_time_sec": 49.9
+      "eval_time_sec": 34.38,
+      "wall_time_sec": 37.7
     },
     {
       "rank": 2,
       "group": "binners-and-losers",
       "perplexity": 19.7366,
       "total_params": 99882726,
-      "eval_time_sec": 53.99,
-      "wall_time_sec": 58.9
+      "eval_time_sec": 35.34,
+      "wall_time_sec": 39.8
     },
     {
       "rank": 3,
-      "group": "offercome",
-      "perplexity": 21.4713,
-      "total_params": 96734720,
-      "eval_time_sec": 41.8,
-      "wall_time_sec": 46.5
+      "group": "solo",
+      "perplexity": 20.6273,
+      "total_params": 94699617,
+      "eval_time_sec": 36.88,
+      "wall_time_sec": 40.1
     },
     {
       "rank": 4,
-      "group": "bumblebee",
-      "perplexity": 23.9359,
-      "total_params": 93910016,
-      "eval_time_sec": 48.86,
-      "wall_time_sec": 53.6
+      "group": "offercome",
+      "perplexity": 21.4713,
+      "total_params": 96734720,
+      "eval_time_sec": 29.11,
+      "wall_time_sec": 33.3
     },
     {
       "rank": 5,
-      "group": "hpp-ai",
-      "perplexity": 25.801,
-      "total_params": 97721600,
-      "eval_time_sec": 45.65,
-      "wall_time_sec": 49.9
+      "group": "bumblebee",
+      "perplexity": 23.47,
+      "total_params": 93910016,
+      "eval_time_sec": 34.05,
+      "wall_time_sec": 37.3
     },
     {
       "rank": 6,
-      "group": "dlcq",
-      "perplexity": 26.7014,
-      "total_params": 98217798,
-      "eval_time_sec": 34.72,
-      "wall_time_sec": 38.5
+      "group": "z-sw",
+      "perplexity": 23.5776,
+      "total_params": 98421792,
+      "eval_time_sec": 38.95,
+      "wall_time_sec": 43.2
     },
     {
       "rank": 7,
-      "group": "aufklarng",
-      "perplexity": 27.7021,
-      "total_params": 91162880,
-      "eval_time_sec": 40.01,
-      "wall_time_sec": 45.3
+      "group": "minions-4",
+      "perplexity": 24.6852,
+      "total_params": 95346176,
+      "eval_time_sec": 28.1,
+      "wall_time_sec": 31.6
     },
     {
       "rank": 8,
-      "group": "solo",
-      "perplexity": 27.7911,
-      "total_params": 93128960,
-      "eval_time_sec": 42.81,
-      "wall_time_sec": 47.9
+      "group": "maggie",
+      "perplexity": 25.5118,
+      "total_params": 98849184,
+      "eval_time_sec": 31.58,
+      "wall_time_sec": 35.8
     },
     {
       "rank": 9,
-      "group": "doubao-4-7",
-      "perplexity": 28.3457,
-      "total_params": 99027200,
-      "eval_time_sec": 44.01,
-      "wall_time_sec": 48.4
+      "group": "hpp-ai",
+      "perplexity": 25.801,
+      "total_params": 97721600,
+      "eval_time_sec": 33.98,
+      "wall_time_sec": 37.3
     },
     {
       "rank": 10,
-      "group": "ding-group",
-      "perplexity": 29.6193,
-      "total_params": 98908320,
-      "eval_time_sec": 47.49,
-      "wall_time_sec": 52.4
+      "group": "dlcq",
+      "perplexity": 26.7015,
+      "total_params": 98217798,
+      "eval_time_sec": 22.13,
+      "wall_time_sec": 25.6
     },
     {
       "rank": 11,
-      "group": "fire-fighter",
-      "perplexity": 30.1945,
-      "total_params": 97461936,
-      "eval_time_sec": 62.63,
-      "wall_time_sec": 67.2
+      "group": "aufklarng",
+      "perplexity": 27.7021,
+      "total_params": 91162880,
+      "eval_time_sec": 28.54,
+      "wall_time_sec": 34.6
     },
     {
       "rank": 12,
-      "group": "indigo-octothorpe",
-      "perplexity": 33.1846,
-      "total_params": 99727232,
-      "eval_time_sec": 67.31,
-      "wall_time_sec": 72.3
+      "group": "doubao-4-7",
+      "perplexity": 28.3457,
+      "total_params": 99027200,
+      "eval_time_sec": 31.73,
+      "wall_time_sec": 35.6
     },
     {
       "rank": 13,
-      "group": "cpzhou",
-      "perplexity": 34.4832,
-      "total_params": 91832960,
-      "eval_time_sec": 42.65,
-      "wall_time_sec": 47.3
+      "group": "oom",
+      "perplexity": 29.5913,
+      "total_params": 98939904,
+      "eval_time_sec": 34.67,
+      "wall_time_sec": 37.6
     },
     {
       "rank": 14,
-      "group": "maggie",
-      "perplexity": 34.8053,
-      "total_params": 98849184,
-      "eval_time_sec": 45.76,
-      "wall_time_sec": 50.4
+      "group": "ding-group",
+      "perplexity": 29.6193,
+      "total_params": 98908320,
+      "eval_time_sec": 33.81,
+      "wall_time_sec": 37.4
     },
     {
       "rank": 15,
-      "group": "251b-nct",
-      "perplexity": 40.6346,
-      "total_params": 91654400,
-      "eval_time_sec": 66.68,
-      "wall_time_sec": 85.1
+      "group": "fire-fighter",
+      "perplexity": 30.1945,
+      "total_params": 97461936,
+      "eval_time_sec": 40.01,
+      "wall_time_sec": 44.1
     },
     {
       "rank": 16,
-      "group": "team-awesome",
-      "perplexity": 41.4169,
-      "total_params": 91903360,
-      "eval_time_sec": 38.53,
-      "wall_time_sec": 42.1
+      "group": "lyra",
+      "perplexity": 30.8526,
+      "total_params": 91818240,
+      "eval_time_sec": 26.28,
+      "wall_time_sec": 29.8
     },
     {
       "rank": 17,
-      "group": "orange-cat",
-      "perplexity": 55.1004,
-      "total_params": 98785792,
-      "eval_time_sec": 49.23,
-      "wall_time_sec": 54.1
-    },
-    {
-      "rank": 18,
-      "group": "wilt-bam-kobe",
-      "perplexity": 70.5703,
-      "total_params": 19435776,
-      "eval_time_sec": 13.07,
-      "wall_time_sec": 16.1
-    },
-    {
-      "rank": 19,
-      "group": "renren",
-      "perplexity": 85.6118,
-      "total_params": 76088832,
-      "eval_time_sec": 38.07,
+      "group": "indigo-octothorpe",
+      "perplexity": 33.1846,
+      "total_params": 99727232,
+      "eval_time_sec": 38.99,
       "wall_time_sec": 43.3
     },
     {
+      "rank": 18,
+      "group": "cpzhou",
+      "perplexity": 34.4832,
+      "total_params": 91832960,
+      "eval_time_sec": 30.33,
+      "wall_time_sec": 34.1
+    },
+    {
+      "rank": 19,
+      "group": "dbdx",
+      "perplexity": 35.251,
+      "total_params": 98778624,
+      "eval_time_sec": 32.33,
+      "wall_time_sec": 36.9
+    },
+    {
       "rank": 20,
-      "group": "a-sheep",
-      "perplexity": 87.8318,
-      "total_params": 51463168,
-      "eval_time_sec": 24.1,
-      "wall_time_sec": 27.6
+      "group": "who-s-adam",
+      "perplexity": 35.4785,
+      "total_params": 97713920,
+      "eval_time_sec": 36.01,
+      "wall_time_sec": 40.0
     },
     {
       "rank": 21,
-      "group": "rabong",
-      "perplexity": 205.81,
-      "total_params": 30357504,
-      "eval_time_sec": 16.48,
-      "wall_time_sec": 19.6
+      "group": "251b-nct",
+      "perplexity": 40.6346,
+      "total_params": 91654400,
+      "eval_time_sec": 41.85,
+      "wall_time_sec": 47.5
     },
     {
       "rank": 22,
-      "group": "dbdx",
-      "perplexity": 375.9356,
-      "total_params": 16169472,
-      "eval_time_sec": 22.31,
-      "wall_time_sec": 25.1
+      "group": "team-awesome",
+      "perplexity": 41.4169,
+      "total_params": 91903360,
+      "eval_time_sec": 26.29,
+      "wall_time_sec": 29.6
     },
     {
       "rank": 23,
-      "group": "class",
-      "perplexity": 582.8395,
-      "total_params": 16287488,
-      "eval_time_sec": 8.3,
-      "wall_time_sec": 11.3
+      "group": "zz-top",
+      "perplexity": 45.5555,
+      "total_params": 99626688,
+      "eval_time_sec": 29.57,
+      "wall_time_sec": 32.6
     },
     {
       "rank": 24,
+      "group": "orange-cat",
+      "perplexity": 55.1004,
+      "total_params": 98785792,
+      "eval_time_sec": 31.51,
+      "wall_time_sec": 35.9
+    },
+    {
+      "rank": 25,
+      "group": "renren",
+      "perplexity": 67.928,
+      "total_params": 99365888,
+      "eval_time_sec": 42.2,
+      "wall_time_sec": 45.9
+    },
+    {
+      "rank": 26,
+      "group": "wilt-bam-kobe",
+      "perplexity": 70.5703,
+      "total_params": 19435776,
+      "eval_time_sec": 8.88,
+      "wall_time_sec": 11.9
+    },
+    {
+      "rank": 27,
+      "group": "a-sheep",
+      "perplexity": 87.8318,
+      "total_params": 51463168,
+      "eval_time_sec": 15.89,
+      "wall_time_sec": 19.0
+    },
+    {
+      "rank": 28,
+      "group": "rabong",
+      "perplexity": 205.81,
+      "total_params": 30357504,
+      "eval_time_sec": 10.71,
+      "wall_time_sec": 13.8
+    },
+    {
+      "rank": 29,
+      "group": "class",
+      "perplexity": 582.8395,
+      "total_params": 16287488,
+      "eval_time_sec": 5.99,
+      "wall_time_sec": 9.0
+    },
+    {
+      "rank": 30,
       "group": "zw",
-      "perplexity": 50790.7693,
+      "perplexity": 50708.4975,
       "total_params": 6963840,
-      "eval_time_sec": 7.26,
-      "wall_time_sec": 9.7
+      "eval_time_sec": 4.76,
+      "wall_time_sec": 7.3
     }
   ],
   "errors": [
@@ -202,14 +250,21 @@
       "status": "ERROR",
       "category": "missing_model_py",
       "hint": "Your HuggingFace repo doesn't contain `model.py` at the top level. Upload your model class file (with `load_model()`) alongside `checkpoint.pt`.",
-      "error": "FileNotFoundError: Expected model.py in /root/cse251b-nanogpt-contest/results/downloads/arknights. Your submission directory must contain a model.py with a load_model() function."
+      "error": "FileNotFoundError: Expected model.py in /home/matt/cse251b-nanogpt-contest/results/downloads/arknights. Your submission directory must contain a model.py with a load_model() function."
+    },
+    {
+      "group": "bill-s-team",
+      "status": "ERROR",
+      "category": "import_error",
+      "hint": "Couldn't import your `model.py`. Verify your submission runs locally with `python evaluate.py --model_dir ./your_dir/ --data val.bin` before pushing to the Hub.",
+      "error": "ModuleNotFoundError: No module named 'config'"
     },
     {
       "group": "deep-learners",
       "status": "DOWNLOAD_FAILED",
-      "category": "repo_not_found",
-      "hint": "HuggingFace says your repo doesn't exist at this ID. Check spelling and case in the submission form (HF IDs are case-sensitive).",
-      "error": "403 Client Error. (Request ID: Root=1-6a0e6949-0d66b7044c9b8dd647ed1784;6cfddaa1-eb2c-4b91-8e1f-1acefb04361b)\n\nCannot access gated repo for url https://huggingface.co/KevL031217/cse251b-group-deeplear"
+      "category": "download_failed",
+      "hint": "Couldn't download your repo from HuggingFace. Check the repo ID and that the repo is public (or shared with the TA accounts).",
+      "error": "403 Client Error. (Request ID: Root=1-6a141efb-1475824640fa06305ae72ad3;cd947bcc-fe4a-41e7-aad2-56cb6315a545)\n\nCannot access gated repo for url https://huggingface.co/KevL031217/cse251b-group-deeplear"
     },
     {
       "group": "gli",
@@ -223,56 +278,35 @@
       "status": "ERROR",
       "category": "missing_model_py",
       "hint": "Your HuggingFace repo doesn't contain `model.py` at the top level. Upload your model class file (with `load_model()`) alongside `checkpoint.pt`.",
-      "error": "FileNotFoundError: Expected model.py in /root/cse251b-nanogpt-contest/results/downloads/group7. Your submission directory must contain a model.py with a load_model() function."
+      "error": "FileNotFoundError: Expected model.py in /home/matt/cse251b-nanogpt-contest/results/downloads/group7. Your submission directory must contain a model.py with a load_model() function."
     },
     {
       "group": "liw069",
       "status": "ERROR",
       "category": "missing_model_py",
       "hint": "Your HuggingFace repo doesn't contain `model.py` at the top level. Upload your model class file (with `load_model()`) alongside `checkpoint.pt`.",
-      "error": "FileNotFoundError: Expected model.py in /root/cse251b-nanogpt-contest/results/downloads/liw069. Your submission directory must contain a model.py with a load_model() function."
-    },
-    {
-      "group": "lyra",
-      "status": "ERROR",
-      "category": "missing_checkpoint",
-      "hint": "Your repo is missing `checkpoint.pt`. Either name your weights file `checkpoint.pt` or use `--checkpoint_filename` and tell the TAs.",
-      "error": "FileNotFoundError: Checkpoint not found: /root/cse251b-nanogpt-contest/results/downloads/lyra/checkpoint.pt"
-    },
-    {
-      "group": "minions-4",
-      "status": "ERROR",
-      "category": "import_error",
-      "hint": "Couldn't import your `model.py`. Verify your submission runs locally with `python evaluate.py --model_dir ./your_dir/ --data val.bin` before pushing to the Hub.",
-      "error": "ModuleNotFoundError: No module named 'train_gptrs'"
-    },
-    {
-      "group": "oom",
-      "status": "ERROR",
-      "category": "missing_model_py",
-      "hint": "Your HuggingFace repo doesn't contain `model.py` at the top level. Upload your model class file (with `load_model()`) alongside `checkpoint.pt`.",
-      "error": "FileNotFoundError: Expected model.py in /root/cse251b-nanogpt-contest/results/downloads/oom. Your submission directory must contain a model.py with a load_model() function."
+      "error": "FileNotFoundError: Expected model.py in /home/matt/cse251b-nanogpt-contest/results/downloads/liw069. Your submission directory must contain a model.py with a load_model() function."
     },
     {
       "group": "otterly-intelligent",
       "status": "ERROR",
       "category": "missing_model_py",
       "hint": "Your HuggingFace repo doesn't contain `model.py` at the top level. Upload your model class file (with `load_model()`) alongside `checkpoint.pt`.",
-      "error": "FileNotFoundError: Expected model.py in /root/cse251b-nanogpt-contest/results/downloads/otterly-intelligent. Your submission directory must contain a model.py with a load_model() function."
+      "error": "FileNotFoundError: Expected model.py in /home/matt/cse251b-nanogpt-contest/results/downloads/otterly-intelligent. Your submission directory must contain a model.py with a load_model() function."
     },
     {
       "group": "pico-on-my-gptacos",
-      "status": "DOWNLOAD_FAILED",
-      "category": "download_failed",
-      "hint": "Couldn't download your repo from HuggingFace. Check the repo ID and that the repo is public (or shared with the TA accounts).",
-      "error": "403 Client Error. (Request ID: Root=1-6a0e7113-7d77fd7970a4a796215b9113;b4a467bf-8844-4f85-ab39-bd00851601ca)\n\nCannot access gated repo for url https://huggingface.co/jankwong705/picoLM/resolve/df7390"
+      "status": "ERROR",
+      "category": "missing_checkpoint",
+      "hint": "Your repo is missing `checkpoint.pt`. Either name your weights file `checkpoint.pt` or use `--checkpoint_filename` and tell the TAs.",
+      "error": "FileNotFoundError: Checkpoint not found: /home/matt/cse251b-nanogpt-contest/results/downloads/pico-on-my-gptacos/checkpoint.pt"
     },
     {
       "group": "porto-s-bakers",
       "status": "ERROR",
       "category": "missing_model_py",
       "hint": "Your HuggingFace repo doesn't contain `model.py` at the top level. Upload your model class file (with `load_model()`) alongside `checkpoint.pt`.",
-      "error": "FileNotFoundError: Expected model.py in /root/cse251b-nanogpt-contest/results/downloads/porto-s-bakers. Your submission directory must contain a model.py with a load_model() function."
+      "error": "FileNotFoundError: Expected model.py in /home/matt/cse251b-nanogpt-contest/results/downloads/porto-s-bakers. Your submission directory must contain a model.py with a load_model() function."
     },
     {
       "group": "qudie",
@@ -287,27 +321,6 @@
       "category": "import_error",
       "hint": "Couldn't import your `model.py`. Verify your submission runs locally with `python evaluate.py --model_dir ./your_dir/ --data val.bin` before pushing to the Hub.",
       "error": "SyntaxError: source code string cannot contain null bytes"
-    },
-    {
-      "group": "who-s-adam",
-      "status": "ERROR",
-      "category": "missing_model_py",
-      "hint": "Your HuggingFace repo doesn't contain `model.py` at the top level. Upload your model class file (with `load_model()`) alongside `checkpoint.pt`.",
-      "error": "FileNotFoundError: Expected model.py in /root/cse251b-nanogpt-contest/results/downloads/who-s-adam. Your submission directory must contain a model.py with a load_model() function."
-    },
-    {
-      "group": "z-sw",
-      "status": "ERROR",
-      "category": "missing_checkpoint",
-      "hint": "Your repo is missing `checkpoint.pt`. Either name your weights file `checkpoint.pt` or use `--checkpoint_filename` and tell the TAs.",
-      "error": "FileNotFoundError: Checkpoint not found: /root/cse251b-nanogpt-contest/results/downloads/z-sw/checkpoint.pt"
-    },
-    {
-      "group": "zz-top",
-      "status": "DOWNLOAD_FAILED",
-      "category": "download_failed",
-      "hint": "Couldn't download your repo from HuggingFace. Check the repo ID and that the repo is public (or shared with the TA accounts).",
-      "error": "403 Client Error. (Request ID: Root=1-6a0e7312-5b6ff4142442ae276e42a696;3a02c823-5fb2-42b4-97f9-546a7721a267)\n\nCannot access gated repo for url https://huggingface.co/ZhichengWang520/cse251b-zz-top/re"
     }
   ]
 }
