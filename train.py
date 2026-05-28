@@ -115,10 +115,16 @@ ctx = nullcontext() if device_type == 'cpu' else torch.amp.autocast(device_type=
 
 # poor man's data loader
 data_dir = os.path.join(dataset)
-train_shards = sorted([
-    os.path.join(data_dir, f) for f in os.listdir(data_dir)
+fineweb_shards = sorted([
+    os.path.join('edu_fineweb10B', f) for f in os.listdir('edu_fineweb10B')
     if f.startswith('edufineweb_train') and f.endswith('.npy')
 ])
+commonpile_shards = sorted([
+    os.path.join('common_pile_filtered', f) for f in os.listdir('common_pile_filtered')
+    if f.startswith('commonpile_train') and f.endswith('.npy')
+]) if os.path.exists('common_pile_filtered') else []
+
+train_shards = fineweb_shards*3 + commonpile_shards
 val_data = np.load(os.path.join(data_dir, 'edufineweb_val_000000.npy'))
 train_data = np.load(random.choice(train_shards))
 
